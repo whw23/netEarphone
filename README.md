@@ -18,7 +18,7 @@
 
 ## 使用方式
 
-1. 在服务端启动./NetEarphone (默认本机8080端口)
+1. 在服务端启动./NetEarphone (默认本机8080端口) `java -jar .\NetEarphone.jar`
 2. http://localhost:8080 有一个页面  index.html 可以在本机测试。websocket接口为 ws://localhost:8080/ws
 3. 由于非localhost网页浏览器没有权限获取音频，需要SSL证书加密http和ws
 4. 通过 `ipconfig`/`ifconfig` 获取private ip，如果是服务器
