@@ -1,0 +1,8 @@
+<!-- res/values/strings.xml -->
+<resources>
+    <string name="app_name">Net Earphone</string>
+    <string-array name="audio_sources">
+        <item>Microphone</item>
+        <item>Loopback</item>
+    </string-array>
+</resources>

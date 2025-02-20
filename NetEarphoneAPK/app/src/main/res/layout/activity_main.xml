@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 布局采用垂直 LinearLayout -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- WebSocket地址 -->
+    <EditText
+        android:id="@+id/etWsAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="WebSocket 地址"
+        android:text="wss://haoweivmsea.southeastasia.cloudapp.azure.com:12222/ws"
+        android:inputType="textUri"/>
+
+    <!-- 录制来源选择 -->
+    <Spinner
+        android:id="@+id/spinnerAudioSource"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"/>
+
+    <!-- 状态显示 -->
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Disconnected"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="12dp"/>
+
+    <!-- 按钮组 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp">
+
+        <Button
+            android:id="@+id/btnConnect"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Connect"/>
+
+        <Button
+            android:id="@+id/btnDisconnect"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Disconnect"
+            android:enabled="false"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp">
+
+        <Button
+            android:id="@+id/btnStartRecording"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Start Recording"
+            android:enabled="false"/>
+
+        <Button
+            android:id="@+id/btnStopRecording"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Stop Recording"
+            android:enabled="false"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnDownload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Download Recorded Audio"
+        android:layout_marginTop="12dp"
+        android:visibility="gone"/>
+
+    <!-- 日志输出 -->
+    <ScrollView
+        android:id="@+id/scrollLog"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="12dp"
+        android:layout_weight="1">
+        <TextView
+            android:id="@+id/tvLog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"/>
+    </ScrollView>
+
+</LinearLayout>
